@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+	<style type="text/css">
+		body {
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		let counter = 0;
+
+		function countdown(){
+			if(counter == 0){
+				alert("Cannot decrease further!!!");
+				return;
+			}
+			else{
+				counter--;
+				document.querySelector("#ctr").innerHTML = counter;
+			}
+		}
+		function countup(){
+			if (counter == 10){
+				alert("Cannot increase further!!!");
+				return;
+			}
+			else{
+				counter++;
+				document.querySelector("#ctr").innerHTML = counter;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>COUNTER</h1>
+	<p id = ctr>0</p>
+	<button onclick="countup()">Increment</button>
+	<button onclick="countdown()">Decrement</button>
+</body>
+</html>
